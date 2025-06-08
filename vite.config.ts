@@ -174,3 +174,18 @@ function chrome129IssuePlugin() {
     },
   };
 }
+
+
+export default defineConfig({
+  plugins: [
+    remixVitePlugin(),
+    remixCloudflareDevProxy(),
+    UnoCSS(),
+    nodePolyfills(),
+    optimizeCssModules(),
+    tsconfigPaths()
+  ],
+  build: {
+    sourcemap: false
+  }
+});
